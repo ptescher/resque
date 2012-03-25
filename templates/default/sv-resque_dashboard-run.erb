@@ -2,7 +2,7 @@
 
 export HOME=<%= @options[:log_dir] %>
 exec 2>&1
-exec chpst -u <%= @options[:user] %> /usr/bin/resque-web --foreground --no-launch \
+exec chpst -u <%= @options[:user] %> /usr/local/bin/resque-web --foreground --no-launch \
   --server      thin                                                                   \
   --port        <%= @options[:dashboard_port] %>                                  \
   --app-dir     <%= @options[:log_dir] %>                                         \
