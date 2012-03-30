@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-include_recipe 'redis::client'
+include_recipe 'redis::default'
 include_recipe 'runit'
 
 #
