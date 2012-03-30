@@ -33,7 +33,7 @@ gem_package 'redis'
 gem_package 'redis-namespace'
 gem_package 'yajl-ruby'
 
-daemon_user('resque')
+# daemon_user('resque')
 
 standard_dirs('resque') do
   directories :home_dir, :log_dir, :tmp_dir, :data_dir, :journal_dir, :conf_dir
