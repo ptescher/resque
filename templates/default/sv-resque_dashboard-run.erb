@@ -6,5 +6,5 @@ exec chpst -u <%= @options[:user] %> /usr/local/bin/resque-web --foreground --no
   --server      thin                                                                  \
   --port        <%= @options[:dashboard][:port]   %>                                  \
   --app-dir     <%= @options[:log_dir] %>                                             \
-  --env         DEVELOPMENT                                                           \
+  --env         <$= node.chef_environment %>                                          \
   <%= @options[:conf_dir] %>/resque_conf.rb
