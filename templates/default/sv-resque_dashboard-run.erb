@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export HOME=<%= @options[:log_dir] %>
+export RAILS_ENV=<%= node.chef_environment %>
 exec 2>&1
 exec chpst -u <%= @options[:user] %> /usr/local/bin/resque-web --foreground --no-launch     \
   --server      thin                                                                  \
